@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 5001;
 /** ---------- MIDDLEWARE ---------- **/
 app.use(express.json());
 app.use(express.static('build'));
+app.use(express.urlencoded({extended: true}))
 
 /** ---------- EXPRESS ROUTES ---------- **/
 app.use('/api/gallery', gallery);
