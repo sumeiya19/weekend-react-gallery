@@ -20,14 +20,14 @@ const GalleryItem = ({ galleryItem }) => {
     };
 
     return (
-        <div>
+        <div data-testid="galleryItem">
             {showImage ? (
-                <img src={galleryItem.url} alt={galleryItem.title} onClick={toggleView} />
+                <img src={galleryItem.url} alt={galleryItem.title} onClick={toggleView} data-testid="toggle" />
             ) : (
                 <p onClick={toggleView}>{galleryItem.description}</p>
             )}
             <br />
-            <button onClick={handleLikes}>Like ❤️</button>
+            <button onClick={handleLikes} data-testid="like">Like ❤️</button>
             <div>Likes: {likes}</div>
         </div>
     );

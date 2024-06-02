@@ -21,8 +21,8 @@ const GalleryList = () => {
   };
 
   return (
-    <div>
-      <div>
+    
+      <div data-testid="galleryList">
         {galleryList.map((item) => ( 
           <div key={item.id}>
             <h3>{item.title}</h3> 
@@ -31,7 +31,7 @@ const GalleryList = () => {
           </div>
         ))}
       </div>
-    </div>
+ 
   );
 };
 
